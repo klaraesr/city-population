@@ -1,0 +1,9 @@
+.bannerRow {
+  height: fit-content;
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.bannerText {
+  font-size: 5em;
+}
