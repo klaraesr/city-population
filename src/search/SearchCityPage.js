@@ -5,14 +5,15 @@ import { TYPES } from './SearchView'
 function SearchCityPage() {
   const [searchValue, setSearchValue] = useState('')
 
-  const handleSearch = (e) => {
-  }
-  
+  const handleSearch = (e) => {}
+
   return (
-    <SearchView type={TYPES.city}
-                searchString={searchValue}
-                setSearchString={setSearchValue}
-                onSearch={handleSearch}></SearchView>
+    <SearchView
+      type={TYPES.city}
+      searchString={searchValue}
+      setSearchString={setSearchValue}
+      onSearch={handleSearch}
+    ></SearchView>
   )
 }
 

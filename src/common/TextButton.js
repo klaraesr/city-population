@@ -3,9 +3,7 @@ import './TextButton.css'
 
 function TextButton(props) {
   return (
-    <Button variant='outline-primary' 
-            size='lg'
-            onClick={props.onClick}>
+    <Button variant="outline-primary" size="lg" onClick={props.onClick}>
       {props.text}
     </Button>
   )

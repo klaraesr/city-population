@@ -6,7 +6,7 @@ function StartPage() {
   return (
     <Container>
       <Banner></Banner>
-      <SearchOptions/>
+      <SearchOptions />
     </Container>
   )
 }

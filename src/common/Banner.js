@@ -4,13 +4,13 @@ import Col from 'react-bootstrap/Col'
 import './Banner.css'
 
 function Banner() {
-    return (
-        <Row className='bannerRow'>
-          <Col>
-            <h1 className='bannerText'>CityPop</h1>
-          </Col>
-        </Row>
-    )
+  return (
+    <Row className="bannerRow">
+      <Col>
+        <h1 className="bannerText">CityPop</h1>
+      </Col>
+    </Row>
+  )
 }
 
 export default Banner
