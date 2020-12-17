@@ -11,7 +11,6 @@ export const TYPES = {
 function SearchView({ type, searchString, setSearchString, onSearch }) {
   return (
     <div className="container">
-      <Banner />
       <h2 className="subheader">{`Search by ${type}`.toUpperCase()}</h2>
       <Form className="form">
         <Form.Control
