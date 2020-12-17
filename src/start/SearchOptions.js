@@ -1,13 +1,16 @@
-import { Col } from 'react-bootstrap'
-import Row from 'react-bootstrap/Row'
+import { Link } from 'react-router-dom'
 import TextButton from '../common/TextButton'
 import './SearchOptions.css'
 
 function SearchOptions() {
   return (
     <div className="optionsContainer">
-      <TextButton text="Search by City"></TextButton>
-      <TextButton text="Search by Country"></TextButton>
+      <Link to="/search/city">
+        <TextButton text="Search by City"></TextButton>
+      </Link>
+      <Link to="/search/country">
+        <TextButton text="Search by Country"></TextButton>
+      </Link>
     </div>
   )
 }
