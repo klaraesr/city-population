@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+  padding: 0px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.list-item {
+  height: 40px;
+  margin: 2px;
+}
