@@ -1,10 +1,12 @@
-import Banner from './common/Banner'
-import Container from 'react-bootstrap/Container'
-import StartPage from './start/StartPage'
-import SearchCountryPage from './search/SearchCountryPage'
-import SearchCityPage from './search/SearchCityPage'
-import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Banner from './common/Banner'
+import CityResultPage from './result/CityResultPage'
+import Container from 'react-bootstrap/Container'
+import CountryResultPage from './result/CountryResultPage'
+import StartPage from './start/StartPage'
+import SearchCityPage from './search/SearchCityPage'
+import SearchCountryPage from './search/SearchCountryPage'
+import './App.css'
 
 function App() {
   return (
@@ -17,6 +19,12 @@ function App() {
           </Route>
           <Route path="/search/country">
             <SearchCountryPage />
+          </Route>
+          <Route path="/result/city/:query">
+            <CityResultPage />
+          </Route>
+          <Route path="/result/country/:query">
+            <CountryResultPage />
           </Route>
           <Route path="/">
             <StartPage />
