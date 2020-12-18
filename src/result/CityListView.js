@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import TextButton from '../common/TextButton'
 import './CityListView.css'
 
-function CityListView({ countryName, cities }) {
-  const listItems = cities.map((cityName) => {
-    return <CityListItem cityName={cityName} />
+function CityListView({ countryName, cityNames }) {
+  const listItems = cityNames.map((cityName) => {
+    return <CityListItem cityName={cityName} key={cityName} />
   })
 
   return (
@@ -17,8 +17,8 @@ function CityListView({ countryName, cities }) {
 
 function CityListItem({ cityName }) {
   return (
-    <li className="list-item" key={cityName}>
-      <Link to={`/details/${cityName}`}>
+    <li className="list-item">
+      <Link to={`/result/city/${cityName}`}>
         <TextButton text={cityName} />
       </Link>
     </li>
