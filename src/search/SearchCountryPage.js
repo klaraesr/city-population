@@ -1,18 +1,18 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import SearchView from './SearchView'
 import { TYPES } from './SearchView'
 
 function SearchCountryPage() {
   const [searchValue, setSearchValue] = useState('')
-
-  const handleSearch = (e) => {}
+  const history = useHistory()
 
   return (
     <SearchView
       type={TYPES.country}
       searchString={searchValue}
       setSearchString={setSearchValue}
-      onSearch={handleSearch}
+      onSearch={() => history.push(`/result/country/${searchValue}`)}
     ></SearchView>
   )
 }
