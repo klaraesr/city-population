@@ -6,7 +6,6 @@ import CountryResultPage from './result/CountryResultPage'
 import StartPage from './start/StartPage'
 import SearchCityPage from './search/SearchCityPage'
 import SearchCountryPage from './search/SearchCountryPage'
-import './App.css'
 
 function App() {
   return (
