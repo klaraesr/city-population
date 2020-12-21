@@ -5,16 +5,12 @@ import './SearchOptions.css'
 function SearchOptions() {
   return (
     <div className="optionsContainer">
-      {/* <div className="option-left"> */}
       <Link to="/search/city">
-        <TextButton text="Search by City"></TextButton>
+        <TextButton text="SEARCH BY CITY"></TextButton>
       </Link>
-      {/* </div> */}
-      {/* <div className="option-right"> */}
       <Link to="/search/country">
-        <TextButton text="Search by Country"></TextButton>
+        <TextButton text="SEARCH BY COUNTRY"></TextButton>
       </Link>
-      {/* </div> */}
     </div>
   )
 }

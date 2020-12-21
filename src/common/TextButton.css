@@ -3,7 +3,7 @@
   height: 100%;
   width: 100%;
   min-width: 200px;
-  border: 1px solid black;
+  font-size: large;
 }
 
 .btn:hover {

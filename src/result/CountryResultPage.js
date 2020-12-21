@@ -4,7 +4,7 @@ import { getCitiesByCountry } from '../api'
 import ClipLoader from 'react-spinners/ClipLoader'
 import CityListView from './CityListView'
 
-const LIST_LENGTH = 3
+const LIST_LENGTH = 3 // number of cities shown in list
 
 function CountryResultPage() {
   const [loading, setLoading] = useState(true)
@@ -18,8 +18,9 @@ function CountryResultPage() {
       try {
         const cityData = await getCitiesByCountry(query, LIST_LENGTH)
 
-        setCityNames(cityData.geonames.map((city) => city.toponymName))
+        setCityNames(cityData.geonames.map((city) => city.name))
         setCountryName(cityData.geonames[0].countryName)
+
         setLoading(false)
       } catch (e) {
         setErrorMsg(e.message)
