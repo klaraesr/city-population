@@ -12,6 +12,14 @@
   text-align: center;
 }
 
-.rounded-circle {
+input {
   height: 60px;
+}
+
+input:disabled {
+  opacity: 0.3;
+}
+
+input:focus {
+  outline: none;
 }

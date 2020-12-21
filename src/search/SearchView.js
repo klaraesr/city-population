@@ -1,7 +1,10 @@
-import { Form, Image } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 import icon from './icons/magnifyingGlass.svg'
 import './SearchView.css'
 
+/**
+ * A search page can either by of type city or country.
+ */
 export const TYPES = {
   city: 'city',
   country: 'country',
@@ -19,13 +22,13 @@ function SearchView({ type, searchString, setSearchString, onSearch }) {
           value={searchString}
           onChange={(e) => setSearchString(e.target.value)}
         />
-        <div className="search-button" type="submit">
-          <Image
+        <div className="search-button">
+          <input
+            type="image"
             src={icon}
             alt="Search"
-            onClick={onSearch}
-            roundedCircle
-          ></Image>
+            disabled={!searchString}
+          ></input>
         </div>
       </Form>
     </div>
