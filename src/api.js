@@ -1,5 +1,5 @@
 const API_USERNAME = process.env.REACT_APP_API_USERNAME
-const baseUrl = `http://api.geonames.org/search?fuzzy=0.8&style=long&type=json&username=${API_USERNAME}`
+const baseUrl = `http://api.geonames.org/search?style=long&type=json&username=${API_USERNAME}`
 const cityFeatureCodes = `featureCode=PPLC&featureCode=PPLA`
 
 export const getCity = async (query) => {
@@ -24,11 +24,13 @@ export const getCitiesByCountry = async (query, numberOfCities) => {
   const countryCode = countryRes.geonames[0].countryCode
 
   // Fetch cities based on country code
-  const citiesQueryUrl = `${baseUrl}&name=${query}&country=${countryCode}&${cityFeatureCodes}&orderby=population&maxRows=${numberOfCities}`
-  return fetch(citiesQueryUrl).then(processResponse)
+  const citiesQueryUrl = `${baseUrl}&q=${query}&country=${countryCode}&${cityFeatureCodes}&orderby=population&maxRows=${numberOfCities}`
+  const cityRes = await fetch(citiesQueryUrl).then(processResponse)
+  return cityRes
 }
 
 const processResponse = async (res) => {
+  console.log(res)
   if (res.ok) {
     const jsonResult = await res.json()
     if (jsonResult.status) {
